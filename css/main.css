@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* font */
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700|UnifrakturCook:700&display=swap&subset=korean');
+.wrap_mashup .list_nav .link_nav{width:100%;font-family: 'UnifrakturCook', cursive;font-size:50px;line-height:100px;color:#064539;}
+
+/* Main 페이지 CSS */
+@keyframes fontcolor{0%{transform:translateX(0);color:#064539}50%{color:#d6d3d3}100%{transform:translateX(10px);color:#020305}}
+body {display: block; margin: 0 auto;}
+.wrap_mashup{overflow:hidden;position:relative;width:100%;min-width:100%;height:100vh;min-height:0 auto;background:url(../images/bg_main_m.jpg) no-repeat 0 0;background-size:100% 100%}
+
+/* 탑 메뉴 영역 */
+#top{position: fixed;top: 0;left: 0;width: 100%;font: 20px 'Ubuntu' !important;z-index: 999;}
+.bgtop::before{/*변경할 가상요소 속성변경 class*/opacity: 0.5 !important;}
+
+/*현재 페이지 위치 표시 메뉴 글자색 class*/
+.selpos a{color:#02F8FC !important;}
+
+/*로고 이미지*/
+#top>a>img{position: relative;width: 80px;/*height값 안쓰고 비율 유지*/cursor: pointer;padding: 5%;}
+.wrap_mashup img:nth-child(3) {position: absolute;width: 60%;top: 50%;left: 50%;transform:translate(-50%, -50%);}
+.wrap_mashup img:nth-child(4) {position: absolute;width: 114%;top: 80%;right: -53%;transform: translate(-50%, -50%);}
+
+/*GNB 메뉴*/
+#top>ul{position: absolute;width: 20%;right: 10%;bottom: 15%;}
+#top>ul>li{width: 33.333%;text-align: center;line-height: 30px;}
+#top>ul>li>a{display: block;width: 100%;height: 100%;color: #fff;}
+
+/******** 햄버거버튼 ********/
+#ham{position: fixed;top: 25px;right: 25px;width: 40px;height: 25px;cursor: pointer;z-index: 9999999;}
+#ham>span{position: absolute;display: block;width: 100%;height: 3px;background-color: #064539;}
+#ham>span:first-child{top: 0;}
+#ham>span:nth-child(2){top: 10px;left: 0;}
+#ham>span:last-child{top: 20px;}
+
+/**** 전체메뉴 박스 ***/
+#menu{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: url(../images/bg_main_m.jpg) no-repeat 0 0;background-size: 210%;z-index: 999999;display: none;}
+.list_nav{position:absolute;z-index:10;width:100%;transform:rotate(-10deg); padding-left: 20%;padding-top: 30%;}
+.list_nav:after{display:block;position:absolute;top:0;left:0;z-index:999;background:red;content:''}
+.list_nav li{width:396px;list-style:none;}
+.list_nav .link_nav{display:block;width:100%;font-family: 'UnifrakturCook', cursive;font-size:64px;line-height:100px;color:#064539}
+.list_nav .link_nav:hover{animation:fontcolor 2s linear infinite alternate both}

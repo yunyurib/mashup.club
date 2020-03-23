@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko" class="js wf-newsgothicstd-n4-active wf-poynteroldstyledisplaycon-n4-active wf-active">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mashup| Collection</title>
+    <meta http-equiv="pragma" content="nocache">
+    <meta name="description" content="mashup hompage">
+    <meta name="keywords" content="mashup">
+    <link rel="stylesheet" type="text/css" href="css/collection.css">
+	
+	<meta name="keywords" content="svg text, animation, scroll, svg filter, Intersection Observer">
+	<meta name="author" content="Codrops">
+	<link rel="stylesheet" href="css/rhw1vur.css">
+	<link rel="stylesheet" type="text/css" href="css/base.bd67a085.css">
+	<script type="text/javascript" async="" src="js/ga.js.다운로드"></script>
+	<script src="js/webfont.js.다운로드"></script>
+	<script src="js/analytics.js.다운로드"></script>
+	<link rel="stylesheet" type="text/css" href="css/cda.css">
+	<link type="text/css" rel="stylesheet" href="chrome-extension://eobejphpabbjeehffmbiecckpkggpbai/style.css">
+	<style type="text/css">
+	main{background-color: #fff;color: black;}
+
+	.grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, calc(500px + 3rem))) !important;
+    justify-content: center;
+    grid-gap: 1vw;
+    margin: 15rem auto;}
+	.svgtext--1 text {
+    fill: #000;
+}.svgtext text {
+    fill: #000;
+    font-size: 42px;
+}
+		.tk-news-gothic-std {
+			font-family: "news-gothic-std", sans-serif;
+		}
+
+		.tk-poynter-oldstyle-display-con {
+			font-family: "poynter-oldstyle-display-con", serif;
+		}
+	</style>
+	<style type="text/css">
+		@font-face {
+			font-family: news-gothic-std;
+			src: url(https://use.typekit.net/af/a5a677/00000000000000000001316d/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"), url(https://use.typekit.net/af/a5a677/00000000000000000001316d/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"), url(https://use.typekit.net/af/a5a677/00000000000000000001316d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");
+			font-weight: 400;
+			font-style: normal;
+			color: #000000;
+		}
+
+		@font-face {
+			font-family: poynter-oldstyle-display-con;
+			src: url(https://use.typekit.net/af/62c010/00000000000000003b9ae890/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"), url(https://use.typekit.net/af/62c010/00000000000000003b9ae890/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"), url(https://use.typekit.net/af/62c010/00000000000000003b9ae890/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");
+			font-weight: 400;
+			font-style: normal;
+		}
+	</style>
+	<script type="text/javascript" charset="utf-8"
+		src="chrome-extension://eobejphpabbjeehffmbiecckpkggpbai/js/content-script/page_context.js"></script>
+</head>
+
+<body class="" naver_screen_capture_injected="true" cz-shortcut-listen="true">
+
+
+	<svg class="hidden">
+		<defs>
+			<filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+				<fegaussianblur stdDeviation="0" result="blur" data-min-deviation="0" data-max-deviation="10">
+				</fegaussianblur>
+				<femerge>
+					<femergenode in="blur"></femergenode>
+				</femerge>
+			</filter>
+			<filter id="blur2" x="-30%" y="-30%" width="160%" height="160%">
+				<fegaussianblur in="SourceAlpha" stdDeviation="0" result="glow" data-min-deviation="0"
+					data-max-deviation="30"></fegaussianblur>
+				<fecolormatrix result="bluralpha" type="matrix" values="0 -1 0 0 0 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1.8 0 ">
+				</fecolormatrix>
+				<feoffset in="bluralpha" dx="0.000000" dy="0.000000" result="offsetBlur"></feoffset>
+				<femerge>
+					<femergenode in="offsetBlur"></femergenode>
+					<femergenode in="SourceGraphic"></femergenode>
+				</femerge>
+			</filter>
+			<filter id="distortionFilter">
+				<feturbulence type="fractalNoise" baseFrequency="0.01 0.03" numOctaves="2" seed="2" stitchTiles="stitch"
+					x="0%" y="0%" width="100%" height="100%" result="noise"></feturbulence>
+				<fedisplacementmap in="SourceGraphic" in2="noise" scale="0" data-min-scale="0" data-max-scale="100"
+					xChannelSelector="R" yChannelSelector="B" x="0%" y="0%" width="100%" height="100%"
+					filterUnits="userSpaceOnUse"></fedisplacementmap>
+			</filter>
+			<filter id="distortionFilter2">
+				<fegaussianblur stdDeviation="10" result="glow"></fegaussianblur>
+				<feturbulence type="fractalNoise" baseFrequency="0 0.1" numOctaves="2" seed="2" stitchTiles="noStitch"
+					x="-30%" y="-30%" width="160%" height="160%" result="noise"></feturbulence>
+				<fedisplacementmap in="SourceGraphic" in2="noise" scale="0" data-min-scale="0" data-max-scale="50"
+					xChannelSelector="R" yChannelSelector="B" x="-30%" y="-30%" width="160%" height="160%"
+					filterUnits="userSpaceOnUse" result="displacement"></fedisplacementmap>
+				<femerge>
+					<femergenode in="glow"></femergenode>
+					<femergenode in="displacement"></femergenode>
+				</femerge>
+			</filter>
+		</defs>
+	</svg>
+	
+	<main>
+		<div class="wrap_mashup"style="z-index: 999;">
+			<h1 class="screen_out">mashup homepage main</h1>
+			<!-- nav 영역 -->
+			<strong class="screen_out">mashup main mene list</strong>
+			<ul class="list_nav">
+				<li><a href="index.html" class="link_nav">home</a></li>
+				<li><a href="about.html" class="link_nav">about</a></li>
+				<li><a href="#none" class="link_nav">collection</a></li>
+				<li><a href="#none" class="link_nav">editorial</a></li>
+				<li><a href="#none" class="link_nav">contact</a></li>
+			</ul>
+			<!-- // nav 영역 -->
+		</div>
+		<div class="frame frame--screen">
+			<div class="frame__counter">
+				<a href="collection01.html" class="frame__counter-text"style="text-decoration: line-through;">S01_VOL.01</a>
+				<a href="collection02.html" class="frame__counter-text">S01_VOL.02</a>
+			</div>
+		</div>
+		<div class="grid">
+			<div class="grid__item">
+				<img class="grid__item-img" src="images/project01_01.jpg"alt="Some image">
+				<h3 class="grid__item-title">"Negative_Dystopia"</h3>
+				<p class="grid__item-description">매 시즌 다양한 컨셉으로 전개되는<br>
+					매쉬업클럽의 이번 시즌은 "네거티브 디스토피아"이다.<br>
+					그들이 종말을 바라보는 법이라는 주제로<br>
+					종말을 재해석하여 전개하였다.<br>
+					종말이 예언되어 아무도 없는 세상 속에서<br>
+					우리의 자유로움을 표현한다.<br>
+					일상생활에서 패션으로 사용하지 않는 소품을 활용하여<br>
+					고정관념을 깨는 아이디어들로 풀어내<br>
+					앞으로 전개될 매쉬업클럽의 방향성을 제시하고있다.</p>
+			</div>
+			<div class="grid__item">
+				<img class="grid__item-img" src="images/project01_02.jpg"alt="Some image">
+				<h3 class="grid__item-title">Geode planning</h3>
+				<p class="grid__item-description">
+					<a href="https://www.instagram.com/rain0_0sun/">Yun yu rim</a> (Web, Stylist, Editor,Hair)<br>
+					<a href="https://www.instagram.com/miioonii/">Lee kyung min</a> (Stylist, Editor)<br>
+					<a href="https://www.instagram.com/xx_vvd_makeup/">Lim tae kyung</a> (Main Makeup Artist, Hair)<br>
+					<a href="https://www.instagram.com/mintage_98/">Kim min ji</a> (Editor)<br>
+					<a href="https://www.instagram.com/cacao_park/">Park hyun ho</a> (Photo Grapher)<br>
+					<a href="https://www.instagram.com/yj_pumdda/">Kim yeon jeong</a> (Photo Grapher)<br>
+					<a href="https://www.instagram.com/hyemkn/">Kim hye Min</a> (Model)<br>
+					<a href="https://www.instagram.com/hyeo_._naaaa/">Jang hyeon ha</a> (Model)<br>
+				</p>
+			</div>
+		</div>
+		<svg class="svgtext svgtext--1" data-filter-type="blur" width="120%" preserveAspectRatio="xMidYMid meet"
+			viewBox="0 0 1000 200">
+			<path id="text-curve1" d="M 0 100 Q 250 200 500 100 Q 750 0 1000 100" fill="none"></path>
+			<text filter="url(#blur)">
+				<textpath href="#text-curve1" startOffset="4090.178630140828">"Negative Dystopia"</textpath>
+			</text>
+		</svg>
+		<svg class="svgtext" data-filter-type="blur" width="120%" preserveAspectRatio="xMidYMid meet"
+			viewBox="0 0 1000 200">
+			<path id="text-curve11" d="M 0 100 Q 250 0 500 100 Q 750 200 1000 100" fill="none"></path>
+			<text filter="url(#blur2)">
+				<textpath href="#text-curve11" startOffset="4846.942949875187">They reinterpreted the end with the theme of how they saw the end.
+				</textpath>
+			</text>
+		</svg>
+		<div class="grid">
+			<div class="grid__item">
+				<img class="grid__item-img" src="images/project01_03.jpg" alt="Some image">
+			</div>
+			<div class="grid__item">
+				<img class="grid__item-img" src="images/project01_04.jpg"alt="Some image">
+			</div>
+		</div>
+		<img class="bigimg" src="images/project01_05.jpg" alt="Some image">
+		<svg class="svgtext svgtext--2" data-filter-type="distortion" width="120%" preserveAspectRatio="xMidYMid meet"
+			viewBox="0 0 1000 200">
+			<path id="text-curve2" d="M 0 50 Q 100 0 200 100 Q 300 200 650 50 C 750 0 750 150 1000 50" fill="none">
+			</path>
+			<text filter="url(#distortionFilter)">
+				<textpath href="#text-curve2" startOffset="10541.017112624048">Believe in myself,Believe in myself,Believe in myself.</textpath>
+			</text>
+		</svg>
+		<svg class="svgtext" data-filter-type="distortion" width="120%" preserveAspectRatio="xMidYMid meet"
+			viewBox="0 0 1000 300">
+			<path id="text-curve22" d="M 0 200 Q 150 300 300 200 Q 700 0 1000 150" fill="none"></path>
+			<text filter="url(#distortionFilter2)">
+				<textpath href="#text-curve22" startOffset="11203.184291249278">We are freer than anyone else.</textpath>
+			</text>
+		</svg>
+		<div class="grid">
+			<div class="grid__item">
+				<img class="grid__item-img" src="images/project01_06.jpg"alt="Some image">
+			</div>
+			<div class="grid__item">
+				<img class="grid__item-img" src="images/project01_07.jpg"alt="Some image">
+			</div>
+		</div>
+		<img class="bigimg" src="images/project01_08.jpg" alt="Some image">
+		<div class="grid-wrap">
+			<svg class="svgtext svgtext--4" data-filter-type="blur" width="120%" preserveAspectRatio="xMidYMid meet"
+				viewBox="0 0 1000 200">
+				<path id="textcircle" d="M 0 0 Q 200 150 500 150 Q 850 150 1000 0 " fill="none"></path>
+				<text filter="url(#blur)">
+					<textpath href="#textcircle" startOffset="20056.85184806897">Man is free. Man is freedom itself.</textpath>
+				</text>
+			</svg>
+			<div class="grid">
+				<div class="grid__item">
+					<img class="grid__item-img" src="images/project01_09.jpg" alt="Some image">
+				</div>
+				<div class="grid__item">
+					<img class="grid__item-img" src="images/project01_10.jpg" alt="Some image">
+				</div>
+			</div>
+			
+		<div class="grid">
+			<div class="grid__item">
+				<img class="grid__item-img" src="images/project01_11.jpg" alt="Some image">
+			</div>
+			<div class="grid__item">
+				<img class="grid__item-img" src="images/project01_12.jpg" alt="Some image">
+			</div>
+		</div>
+		<img class="bigimg" src="images/project01_13.jpg" alt="Some image">
+		
+		<div class="grid">
+			<div class="grid__item">
+				<img class="grid__item-img" src="images/project01_14.jpg" alt="Some image">
+			</div>
+			<div class="grid__item">
+				<img class="grid__item-img" src="images/project01_15.jpg" alt="Some image">
+			</div>
+		</div>
+		
+		<div class="grid">
+			<div class="grid__item">
+				<img class="grid__item-img" src="images/project01_16.jpg" alt="Some image">
+			</div>
+			<div class="grid__item">
+				<img class="grid__item-img" src="images/project01_17.jpg" alt="Some image">
+			</div>
+		</div>
+		
+		<img class="bigimg" src="images/project01_18.jpg" alt="Some image">
+		
+		<div class="grid">
+			<div class="grid__item">
+				<img class="grid__item-img" src="images/project01_19.jpg" alt="Some image">
+			</div>
+			<div class="grid__item">
+				<img class="grid__item-img" src="images/project01_20.jpg" alt="Some image">
+			</div>
+		</div>
+		
+		<div class="grid">
+			<div class="grid__item">
+				<img class="grid__item-img" src="images/project01_21.jpg" alt="Some image">
+			</div>
+			<div class="grid__item">
+				<img class="grid__item-img" src="images/project01_22.jpg" alt="Some image">
+			</div>
+			<div class="grid__item">
+				<img class="grid__item-img" src="images/project01_23.jpg" alt="Some image">
+			</div>
+		</div>
+			<div class="grid_vidio">
+				<embed src="images/project01.MP4" width="1000px" height="500px">
+			</div>
+		<svg class="svgtext svgtext--2" data-filter-type="distortion" width="120%" preserveAspectRatio="xMidYMid meet"
+		viewBox="0 0 1000 200">
+		<path id="text-curve2" d="M 0 50 Q 100 0 200 100 Q 300 200 650 50 C 750 0 750 150 1000 50" fill="none">
+		</path>
+		<text filter="url(#distortionFilter)">
+			<textpath href="#text-curve2" startOffset="10541.017112624048">-the end-</textpath>
+		</text>
+	</svg>
+	</main>
+	<script src="js/js.464d568e.js.다운로드"></script>
+	<script>
+		document.documentElement.className = "js";
+
+		var supportsCssVars = function supportsCssVars() {
+			var e,
+				t = document.createElement("style");
+			return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window
+				.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+		};
+
+		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+	</script>
+    <script>
+        // main bg, img move
+        let bodyWidth = 100 / document.body.offsetWidth,
+            bodyHeight = 100 / document.body.offsetHeight;
+
+        window.addEventListener('mousemove', function (e) {
+            let pageX = e.pageX - document.body.offsetWidth / 2,
+                pageY = e.pageY - document.body.offsetHeight / 2;
+
+            var newvalueX = bodyHeight * pageX;
+            var newvalueY = bodyHeight * pageY;
+            newvalueX = -1 * newvalueX;
+            newvalueY = -1 * newvalueY;
+
+            document.querySelector('.bg_move1').style.transform = 'translateX(' + newvalueX + 'px)';
+            document.querySelector('.bg_move2').style.transform = 'translateY(' + newvalueY + 'px)';
+            document.querySelector('.img_main').style.transform = 'translate(' + newvalueX + 'px,' + newvalueY +
+                'px)';
+        });
+	</script>
+	

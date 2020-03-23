@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/* font */
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700|UnifrakturCook:700&display=swap&subset=korean');
+
+/* reset */
+html, body, div, a, ul, li{margin:0;padding:0;font-size:14px;font-family: 'Nanum Gothic', sans-serif;line-height:1.5;color:#222}
+li{list-style:none}
+a{text-decoration:none}
+
+.screen_out{display:block;width:0;height:0;font-size:0;line-height:0;text-indent:-9999px}
+.img_g{display:block;width:100%}
+
+/* main */
+.wrap_mashup{overflow:hidden;position:relative;width:100%;min-width:1024px;height:100vh;min-height:768px;background:url(../images/bg_main.png) no-repeat 0 0;background-size:100% 100%}
+
+.wrap_mashup .list_nav{position:absolute;top:80px;left:55%;z-index:10;width:396px;transform:rotate(-10deg)}
+.wrap_mashup .list_nav li{width:396px}
+.wrap_mashup .list_nav .link_nav{display:block;width:100%;font-family: 'UnifrakturCook', cursive;font-size:64px;line-height:100px;color:#064539}
+.wrap_mashup .list_nav .link_nav:hover{animation:fontcolor 2s linear infinite alternate both}
+@keyframes fontcolor{
+    0%{transform:translateX(0);color:#064539}
+    50%{color:#d6d3d3}
+    100%{transform:translateX(10px);color:#020305}
+}
+.wrap_mashup .list_bg{overflow:hidden;position:relative;width:100%;height:100%}
+.wrap_mashup .list_bg li{position:absolute;width:100%;height:100%}
+.wrap_mashup .list_bg .bg_move1{bottom:-100px;background:url(../images/bg_move1.png) no-repeat 0 0;background-size:100% 90%;background-position:right center}
+.wrap_mashup .list_bg .bg_move2{bottom:-50px;background:url(../images/bg_move2.png) no-repeat 0 0;background-size:100% 100%;background-position:left top}
+.wrap_mashup .list_bg .img_main{width:100%;height:100%;background:url(../images/img_main.jpeg) no-repeat 0 0;background-size:20% 60%;background-position:center center}
+
+
+    /***********width 크기별 미디어 쿼리 적용*******/
+		/*******최대 width:1399px************/
+		@media only screen and (max-width:1399px){
+			/*메인 이미지 사이즈*/
+			.wrap_mashup .list_bg .img_main{
+                background-size: 30%; }
+			
+        }/*media*/
+        		/*******최대 width:740px************/
+		@media only screen and (max-width:740px){
+            .wrap_mashup .list_bg .img_main{
+                background-size: 50%; }
+            .wrap_mashup{background:url(../images/bg_main_m.jpg) no-repeat 230% 100% !important;
+            background-size:100% 100%;
+            min-width:740px;height:100vh;min-height:100%;
+            }
+			.bg_move1{display: none !important;}
+			.bg_move2{display: none !important;}
+        }/*media*/

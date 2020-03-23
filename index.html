@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MASHUP</title>
+    <meta http-equiv="pragma" content="nocache">
+    <meta name="description" content="mashup hompage">
+    <meta name="keywords" content="mashup">
+    <link rel="stylesheet" type="text/css" href="css/commom.css">
+</head>
+<body>
+    <div class="wrap_mashup">
+        <ul class="list_bg">
+            <li class="bg_move1"></li>
+            <li class="bg_move2"></li>
+            <li class="img_main"></li>
+        </ul>
+        <h1 class="screen_out">mashup homepage main</h1>
+        <!-- nav 영역 -->
+        <strong class="screen_out">mashup main mene list</strong>
+        <ul class="list_nav">
+            <li><a href="about.html" class="link_nav">about</a></li>
+            <li><a href="collection01.html" class="link_nav">collection</a></li>
+            <li><a href="#none" class="link_nav">editorial</a></li>
+            <li><a href="#none" class="link_nav">contact</a></li>
+        </ul>
+        <!-- // nav 영역 -->
+        <!-- contents 영역 -->
+        <strong class="screen_out">mashup main image</strong>
+        <!-- // contents 영역 -->
+    </div>
+
+    <script>   
+        // main bg, img move
+        let bodyWidth = 100 / document.body.offsetWidth,
+            bodyHeight = 100 / document.body.offsetHeight;
+
+        window.addEventListener('mousemove', function (e) {
+            let pageX = e.pageX - document.body.offsetWidth / 2,
+                pageY = e.pageY - document.body.offsetHeight / 2;
+
+            var newvalueX = bodyHeight * pageX;
+            var newvalueY = bodyHeight * pageY;
+            newvalueX = -1 * newvalueX;
+            newvalueY = -1 * newvalueY;
+
+            document.querySelector('.bg_move1').style.transform = 'translateX(' + newvalueX + 'px)';
+            document.querySelector('.bg_move2').style.transform = 'translateY(' + newvalueY + 'px)';
+            document.querySelector('.img_main').style.transform = 'translate(' + newvalueX + 'px,' + newvalueY +
+                'px)';
+        });
+
+    </script>
+</body>
+
+</html>

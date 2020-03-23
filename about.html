@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MASHUP</title>
+    <meta http-equiv="pragma" content="nocache">
+    <meta name="description" content="mashup hompage">
+    <meta name="keywords" content="mashup">
+    <link rel="stylesheet" type="text/css" href="css/about.css">
+</head>
+<body>
+    <div class="wrap_mashup">
+        <h1 class="screen_out">mashup homepage main</h1>
+        <!-- nav 영역 -->
+        <strong class="screen_out">mashup main mene list</strong>
+        <ul class="list_nav">
+            <li><a href="index.html" class="link_nav">home</a></li>
+            <li><a href="about.html" class="link_nav">about</a></li>
+            <li><a href="collection01.html" class="link_nav">collection</a></li>
+            <li><a href="#none" class="link_nav">editorial</a></li>
+            <li><a href="#none" class="link_nav">contact</a></li>
+        </ul>
+        <!-- // nav 영역 -->
+         <!-- contents 영역 -->
+        <div class="about_mashup">
+            <a href="about.html" class="about_logo"></a>
+            <ul class="about_account">
+                <li><img src="images/about_mashup_title.png"></li>
+                <li>저희 매시업클럽은 스트릿 스타일을 기반으로 다양한 분야에<br>사람들이 모여 하나의 새로운 작품을 완성하는 클럽(크루)입니다.</li>
+                <li>매시업(Mashup): 여러 가지 자료에서 요소들을 따와 새로운 것을 만드는 것.</li>
+                <li><a href="https://www.instagram.com/_mashupclub_/"><img src="images/about_icon_insta.png"></a></li>
+                <li>문의 insta DM, 클럽원 지원 인스타 링크.</li>
+            </ul>
+            <img src="images/about_film01.png" style="right: 10px;position: absolute;width: 40%;top: 11%;">
+        </div>
+        <strong class="screen_out">mashup main image</strong>
+        <!-- // contents 영역 -->
+    </div>
+    <script>
+        // main bg, img move
+        let bodyWidth = 100 / document.body.offsetWidth,
+            bodyHeight = 100 / document.body.offsetHeight;
+
+        window.addEventListener('mousemove', function (e) {
+            let pageX = e.pageX - document.body.offsetWidth / 2,
+                pageY = e.pageY - document.body.offsetHeight / 2;
+
+            var newvalueX = bodyHeight * pageX;
+            var newvalueY = bodyHeight * pageY;
+            newvalueX = -1 * newvalueX;
+            newvalueY = -1 * newvalueY;
+
+            document.querySelector('.bg_move1').style.transform = 'translateX(' + newvalueX + 'px)';
+            document.querySelector('.bg_move2').style.transform = 'translateY(' + newvalueY + 'px)';
+            document.querySelector('.img_main').style.transform = 'translate(' + newvalueX + 'px,' + newvalueY +
+                'px)';
+        });
+    </script>
+</body>
+
+</html>
