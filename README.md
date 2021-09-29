@@ -27,7 +27,7 @@ _Mashup : 여러 가지 자료에서 요소들을 따와 새로운 것을 만드
 - jQuery
 
 ## Links
--  web : [__View__](https://xururuca9797.github.io/mashup.club/) 
+-  web : [__View__](https://yunyurib.github.io/mashup.club/) 
 - Instagram : [__View__](https://www.instagram.com/_mashupclub_/) 
 
 ## Founder
